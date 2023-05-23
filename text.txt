@@ -1,0 +1,30 @@
+CREATE TABLE application (
+	id INT(10) unsigned NOT NULL AUTO_INCREMENT,
+	name VARCHAR(128) NOT NULL DEFAULT '',
+	email VARCHAR(30),
+	year YEAR(4),
+	gender VARCHAR(10),
+	kon INT(5),
+	bio TEXT,
+	PRIMARY KEY(id)
+	);
+  
+CREATE TABLE Superpowers(
+	id INT(10) unsigned NOT NULL AUTO_INCREMENT,
+	name VARCHAR(128),
+	PRIMARY KEY(id)
+	);
+
+drop table super;
+
+CREATE TABLE superApp(
+   	id INT(10) unsigned NOT NULL AUTO_INCREMENT,
+	id_app INT(10) unsigned NOT NULL,
+	super INT(10) unsigned NOT NULL,
+	PRIMARY KEY(id),
+	FOREIGN KEY (`id_app`)  REFERENCES `application` (`id`),
+  	FOREIGN KEY (`super`)  REFERENCES `Superpowers` (`id`)
+	);
+
+
+INSERT INTO Superpowers (name) VALUES ('immortality'), ('stena'), ('levitation');
