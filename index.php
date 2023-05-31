@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="UTF-8">
-	<link rel="stylesheet" href="gg.css">
+	<link rel="stylesheet" href="pp.css">
 	<title>Задание 3</title>
 </head>
 
